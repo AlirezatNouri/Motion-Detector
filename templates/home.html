@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link rel="icon" href="https://storage.googleapis.com/lazy-icons/not-found-placeholder.webp" type="image/x-icon">
+    <title>Motion Detection</title>
+  </head>
+  <body>
+    {% include 'partials/_header.html' %}
+    <div class="main-content">
+      <div class="text-center py-10">
+        <h1 class="text-3xl font-bold mb-8">Motion Detection</h1>
+        
+        <div id="errorMessage" class="hidden bg-red-500 text-white p-4 rounded mb-4">
+          Your browser doesn't support camera access. Please try a modern browser.
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-8 justify-center">
+          <div id="controls" class="w-full md:w-96 bg-gray-800 p-6 rounded-lg shadow-lg">
+            <div class="mb-4">
+              <label for="sensitivity" class="block text-sm font-medium mb-2">Motion Sensitivity</label>
+              <input type="range" id="sensitivity" min="1" max="100" value="30" class="w-full">
+            </div>
+            
+            <button id="startButton" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full mb-4">
+              Start Detection
+            </button>
+            
+            <p id="statusText" class="text-gray-400">Camera: Not connected</p>
+          </div>
+
+          <div class="w-full md:w-[640px]">
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+              <div class="relative">
+                <video id="video" class="w-full rounded-lg" autoplay muted></video>
+                <canvas id="motionCanvas" class="absolute top-0 left-0 w-full h-full rounded-lg"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/motion.js"></script>
+  </body>
+</html>
