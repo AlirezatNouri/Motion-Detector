@@ -42,3 +42,46 @@ flask db upgrade
 
 # Run the app
 flask run
+
+## Usage
+
+Once the app is running:
+
+Access through http://localhost:5000 (or whichever port)
+
+Navigate to the motion detector view
+
+Start / stop camera or upload video
+
+See live feed + detection overlays
+
+View history of motion events
+
+Configure thresholds or sensitivity 
+
+
+## Limitations & Future Work
+
+Only works with a single camera input currently
+
+Performance may degrade on high-resolution video
+
+No user authentication or access control
+
+Alerts are basic (no SMS / push)
+
+Needs more calibration for lighting / environmental noise
+
+# Planned improvements:
+
+Add user login / roles / settings
+
+Support multiple cameras / streaming sources
+
+Integrate real-time notifications (email, SMS, push)
+
+Optimize detection algorithm (reduce false positives)
+
+Add tests, CI, containerization (Docker)
+
+Deploy a live instance or mobile app client
