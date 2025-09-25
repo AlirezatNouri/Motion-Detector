@@ -8,7 +8,7 @@ A web application for detecting motion (e.g. in video frames / camera input) and
 2. [Architecture / Design](#architecture)   
 3. [Setup / Installation](#setup)
 4. [Usage](#Usage)
-5. [Limitations & Future Work](#Limitations & Future Work)
+5. [Limitations & Future Work](#Limitations-&-Future-Work)
 
 ---
 
